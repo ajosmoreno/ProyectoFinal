@@ -62,5 +62,4 @@ public final class Cliente extends Usuario{
     public void setDni(String dni) {
         this.dni = dni;
     }
-    
 }
