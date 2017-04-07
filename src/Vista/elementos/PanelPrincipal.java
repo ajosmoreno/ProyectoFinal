@@ -5,19 +5,95 @@
  */
 package Vista.elementos;
 
+import Vista.VentanaPrincipal;
+import java.awt.Graphics;
+import java.awt.Image;
+import java.awt.Toolkit;
+import java.awt.event.ActionEvent;
+import javax.swing.JButton;
+import javax.swing.JLabel;
+import javax.swing.JPasswordField;
+import javax.swing.JTextField;
+
 /**
  *
  * @author Antonio
  */
 public class PanelPrincipal extends javax.swing.JPanel {
 
-    /**
-     * Creates new form PanelPrincipal
-     */
-    public PanelPrincipal() {
-        initComponents();
+    private Image image = Toolkit.getDefaultToolkit().getImage("src/Imagenes/fondo2.jpg");
+    JButton jButtonentrar = new JButton("Entrar");
+    JButton jButtonregistrar = new JButton("Registrar");
+    JLabel jLabelnombre = new JLabel("Usuario:");
+    JLabel jLabelpassword = new JLabel("Contraseña:");
+    JPasswordField jPasswordFieldcontraseña = new JPasswordField ("");
+    JTextField jTextFieldnombre = new JTextField("");
+    JLabel jLabelregistro = new JLabel("¿Aún no estas registrado?");
+    JButton jButtonsalir = new JButton("Salir");
+    VentanaPrincipal padre;
+    
+    
+    public PanelPrincipal(){
+        jButtonentrar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonentrarActionPerformed(evt);
+            }
+
+        });
+        jButtonregistrar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonregistrarActionPerformed(evt);
+            }        
+        });
+
+        
+        this.add(jButtonentrar);
+        this.add(jButtonregistrar);
+        this.add(jLabelnombre);
+        this.add(jLabelpassword);
+        this.add(jPasswordFieldcontraseña);
+        this.add(jTextFieldnombre);
+        this.add(jLabelregistro);
+        this.add(jButtonsalir);
+
+    }
+    
+    public void setPadre(VentanaPrincipal padre) {
+        this.padre = padre;
+    }
+        
+    
+    private void jButtonentrarActionPerformed(java.awt.event.ActionEvent evt) {
+        // TODO add your handling code here:
+
     }
 
+    private void jButtonregistrarActionPerformed(java.awt.event.ActionEvent evt) {
+        // TODO add your handling code here:
+
+    }
+    
+     private void jButtonsalirActionPerformed(java.awt.event.ActionEvent evt) {
+        // TODO add your handling code here:
+        System.exit(0);
+
+    }
+    
+    
+    @Override
+    public void paintComponent(Graphics g) {
+        super.paintComponent(g);
+        g.drawImage(image, 0, 0, 700, 400, this);
+        jButtonentrar.setBounds(350, 200, 75, 30);
+        jButtonregistrar.setBounds(500, 300, 100, 30);
+        jLabelpassword.setBounds(150, 150, 150, 30);
+        jLabelregistro.setBounds(525, 250, 150, 30);
+        jLabelnombre.setBounds(150, 75, 150, 40);
+        jTextFieldnombre.setBounds(300, 75, 150, 30);
+        jPasswordFieldcontraseña.setBounds(300, 150, 150,30);
+        jButtonsalir.setBounds(50, 300, 100, 30);
+    }
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
