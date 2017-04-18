@@ -21,11 +21,11 @@ import javax.swing.JTextField;
  */
 public class PanelPrincipal extends javax.swing.JPanel {
 
-    private Image image = Toolkit.getDefaultToolkit().getImage("src/Imagenes/fondo2.jpg");
+    private Image image = Toolkit.getDefaultToolkit().getImage("src/Imagenes/fondo.png");
     JButton jButtonentrar = new JButton("Entrar");
     JButton jButtonregistrar = new JButton("Registrar");
-    JLabel jLabelnombre = new JLabel("Usuario:");
-    JLabel jLabelpassword = new JLabel("Contraseña:");
+    JLabel jLabelnombre = new JLabel("Usuario");
+    JLabel jLabelpassword = new JLabel("Contraseña");
     JPasswordField jPasswordFieldcontraseña = new JPasswordField ("");
     JTextField jTextFieldnombre = new JTextField("");
     JLabel jLabelregistro = new JLabel("¿Aún no estas registrado?");
@@ -42,8 +42,14 @@ public class PanelPrincipal extends javax.swing.JPanel {
         });
         jButtonregistrar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonregistrarActionPerformed(evt);
+                jButtonregistrarActionPerformed(evt);  
             }        
+        });
+        
+        jButtonsalir.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                System.exit(0);
+            }
         });
 
         
@@ -75,8 +81,7 @@ public class PanelPrincipal extends javax.swing.JPanel {
     
      private void jButtonsalirActionPerformed(java.awt.event.ActionEvent evt) {
         // TODO add your handling code here:
-        System.exit(0);
-
+        
     }
     
     
@@ -84,13 +89,13 @@ public class PanelPrincipal extends javax.swing.JPanel {
     public void paintComponent(Graphics g) {
         super.paintComponent(g);
         g.drawImage(image, 0, 0, 700, 400, this);
-        jButtonentrar.setBounds(350, 200, 75, 30);
-        jButtonregistrar.setBounds(500, 300, 100, 30);
-        jLabelpassword.setBounds(150, 150, 150, 30);
-        jLabelregistro.setBounds(525, 250, 150, 30);
+        jButtonentrar.setBounds(290, 185, 75, 30);
+        jButtonregistrar.setBounds(525, 300, 100, 30);
+        jLabelpassword.setBounds(150, 130, 150, 30);
+        jLabelregistro.setBounds(500, 250, 150, 30);
         jLabelnombre.setBounds(150, 75, 150, 40);
-        jTextFieldnombre.setBounds(300, 75, 150, 30);
-        jPasswordFieldcontraseña.setBounds(300, 150, 150,30);
+        jTextFieldnombre.setBounds(250, 75, 150, 30);
+        jPasswordFieldcontraseña.setBounds(250, 130, 150,30);
         jButtonsalir.setBounds(50, 300, 100, 30);
     }
     
