@@ -84,8 +84,10 @@ public class Registrousuarios extends javax.swing.JDialog {
                 jTextFielddireccion.setText("");
                 jTextFieldtelefono.setText("");
                 jPasswordFieldcontraseña.setText("");
-                jDateChoosernacimiento.setDate(Date fechaestandar);
+                jDateChoosernacimiento.setDate(fechaestandar);
                 jTextFielddni.setText("");
+                jTextFieldusuario.setText("");
+                
             }
         });
 
@@ -103,33 +105,54 @@ public class Registrousuarios extends javax.swing.JDialog {
                 jDateChoosernacimiento.setVisible(true);
                 jLabeldni.setVisible(true);
                 jTextFielddni.setVisible(true);
+               
             }
         });
-
+        
+        
+        jRadioButtonpermiso1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jLabelnombre.setVisible(false);
+                jLabelapellidos.setVisible(false);
+                jLabeldireccion.setVisible(false);
+                jLabeltelefono.setVisible(false);
+                jLabelfechanacimiento.setVisible(false);
+                jTextFieldnombre.setVisible(false);
+                jTextFieldapellidos.setVisible(false);
+                jTextFielddireccion.setVisible(false);
+                jTextFieldtelefono.setVisible(false);
+                jDateChoosernacimiento.setVisible(false);
+                jLabeldni.setVisible(false);
+                jTextFielddni.setVisible(false);
+               
+            }
+        });
+        
+        
+        this.add(jLabelregistro);
         this.add(jButtonaceptar);
         this.add(jButtoncancelar);
         this.add(jButtonborrartodo);
-        this.add(jLabelnombre);
-        this.add(jLabelapellidos);
-        this.add(jLabeldireccion);
-        this.add(jLabeltelefono);
+        this.add(jLabelusuario);
+        this.add(jTextFieldusuario);
         this.add(jLabelcontraseña);
-        this.add(jLabelregistro);
-        this.add(jTextFieldnombre);
-        this.add(jTextFieldapellidos);
-        this.add(jTextFielddireccion);
-        this.add(jTextFieldtelefono);
         this.add(jPasswordFieldcontraseña);
+        this.add(jLabelpermiso);
         this.add(jRadioButtonpermiso1);
         this.add(jRadioButtonpermiso2);
-        this.add(jLabelpermiso);
-        this.add(jLabelfechanacimiento);
-        this.add(jDateChoosernacimiento);
+        this.add(jLabelnombre);
+        this.add(jTextFieldnombre);
+        this.add(jLabelapellidos);
+        this.add(jTextFieldapellidos);
         this.add(jLabeldni);
         this.add(jTextFielddni);
-        
-        Date datechooser = new Date fecha;
-
+        this.add(jLabeldireccion);
+        this.add(jTextFielddireccion);
+        this.add(jLabeltelefono);
+        this.add(jTextFieldtelefono);
+        this.add(jLabelfechanacimiento);
+        this.add(jDateChoosernacimiento);
+   
     }
 
     /**
@@ -157,25 +180,30 @@ public class Registrousuarios extends javax.swing.JDialog {
 
     public void paintComponent(Graphics g) {
 
-        g.drawImage(image, 0, 0, 1080, 600, this);
-        jButtonaceptar.setBounds(450, 500, 75, 30);
-        jButtoncancelar.setBounds(600, 500, 75, 30);
-        jButtonborrartodo.setBounds(750, 500, 75, 30);
-        jLabelnombre.setBounds(100, 130, 150, 25);
-        jLabelapellidos.setBounds(100, 170, 150, 25);
-        jLabeldireccion.setBounds(100, 210, 150, 30);
-        jLabeltelefono.setBounds(100, 250, 150, 30);
-        jLabelcontraseña.setBounds(100, 290, 150, 30);
-        jLabelregistro.setBounds(475, 50, 300, 50);
-        jTextFieldnombre.setBounds(280, 130, 200, 30);
-        jTextFieldapellidos.setBounds(280, 170, 200, 30);
-        jTextFielddireccion.setBounds(280, 210, 200, 30);
-        jTextFieldtelefono.setBounds(280, 250, 200, 30);
-        jPasswordFieldcontraseña.setBounds(310, 130, 150, 30);
-        jRadioButtonpermiso1.setBounds();
-        jRadioButtonpermiso2.setBounds();
-        jLabelpermiso.setBounds();
-        jDateChoosernacimiento.setBounds();
+        g.drawImage(image, 0, 0, 1366, 768, this);
+        jButtonaceptar.setBounds(570, 640, 75, 30);
+        jButtoncancelar.setBounds(760, 640, 75, 30);
+        jButtonborrartodo.setBounds(850, 640, 75, 30);
+        jLabelusuario.setBounds(150,170,150,30);
+        jTextFieldusuario.setBounds(300,170,150,30);
+        jLabelcontraseña.setBounds(150, 220, 150, 30);
+        jPasswordFieldcontraseña.setBounds(150, 270, 150, 30);
+        jLabelpermiso.setBounds(150,310,150,30);
+        jRadioButtonpermiso1.setBounds(300,310,100,30);
+        jRadioButtonpermiso2.setBounds(400,310,100,30);
+        jLabelnombre.setBounds(150, 350, 150, 30);
+        jTextFieldnombre.setBounds(300, 350, 150, 30);
+        jLabelapellidos.setBounds(150, 390, 150, 30);
+        jTextFieldapellidos.setBounds(300, 390, 200, 30);
+        jLabeldireccion.setBounds(150, 430, 200, 30);
+        jTextFielddireccion.setBounds(300, 430, 200, 30);
+        jLabeltelefono.setBounds(150, 470, 150, 30);
+        jTextFieldtelefono.setBounds(300, 470, 150, 30);
+        jLabelfechanacimiento.setBounds(150,510,150,30);
+        jDateChoosernacimiento.setBounds(300,510,100,30);
+        jLabeldni.setBounds(150,550,150,30);
+        jTextFielddni.setBounds(300,550,150,30);
+        jLabelregistro.setBounds(650, 100, 300, 50);
 
     }
 
