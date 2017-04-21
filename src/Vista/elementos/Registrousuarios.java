@@ -49,7 +49,7 @@ public class Registrousuarios extends javax.swing.JDialog {
     JTextField jTextFielddireccion = new JTextField("");
     JTextField jTextFieldtelefono = new JTextField("");
     JPasswordField jPasswordFieldcontraseña = new JPasswordField("");
-    JDateChooser jDateChoosernacimiento;
+    //JDateChooser jDateChoosernacimiento;
     VentanaPrincipal padre;
 
     public Registrousuarios(java.awt.Frame parent, boolean modal) {
@@ -63,7 +63,7 @@ public class Registrousuarios extends javax.swing.JDialog {
         jTextFieldapellidos.setVisible(false);
         jTextFielddireccion.setVisible(false);
         jTextFieldtelefono.setVisible(false);
-        jDateChoosernacimiento.setVisible(false);
+      //  jDateChoosernacimiento.setVisible(false);
         jLabeldni.setVisible(false);
         jTextFielddni.setVisible(false);
 
@@ -84,7 +84,7 @@ public class Registrousuarios extends javax.swing.JDialog {
                 jTextFielddireccion.setText("");
                 jTextFieldtelefono.setText("");
                 jPasswordFieldcontraseña.setText("");
-                jDateChoosernacimiento.setDate(fechaestandar);
+              //  jDateChoosernacimiento.setDate(fechaestandar);
                 jTextFielddni.setText("");
                 jTextFieldusuario.setText("");
                 
@@ -102,7 +102,7 @@ public class Registrousuarios extends javax.swing.JDialog {
                 jTextFieldapellidos.setVisible(true);
                 jTextFielddireccion.setVisible(true);
                 jTextFieldtelefono.setVisible(true);
-                jDateChoosernacimiento.setVisible(true);
+           //     jDateChoosernacimiento.setVisible(true);
                 jLabeldni.setVisible(true);
                 jTextFielddni.setVisible(true);
                
@@ -121,7 +121,7 @@ public class Registrousuarios extends javax.swing.JDialog {
                 jTextFieldapellidos.setVisible(false);
                 jTextFielddireccion.setVisible(false);
                 jTextFieldtelefono.setVisible(false);
-                jDateChoosernacimiento.setVisible(false);
+          //      jDateChoosernacimiento.setVisible(false);
                 jLabeldni.setVisible(false);
                 jTextFielddni.setVisible(false);
                
@@ -151,7 +151,7 @@ public class Registrousuarios extends javax.swing.JDialog {
         this.add(jLabeltelefono);
         this.add(jTextFieldtelefono);
         this.add(jLabelfechanacimiento);
-        this.add(jDateChoosernacimiento);
+   //     this.add(jDateChoosernacimiento);
    
     }
 
@@ -200,7 +200,7 @@ public class Registrousuarios extends javax.swing.JDialog {
         jLabeltelefono.setBounds(150, 470, 150, 30);
         jTextFieldtelefono.setBounds(300, 470, 150, 30);
         jLabelfechanacimiento.setBounds(150,510,150,30);
-        jDateChoosernacimiento.setBounds(300,510,100,30);
+    //    jDateChoosernacimiento.setBounds(300,510,100,30);
         jLabeldni.setBounds(150,550,150,30);
         jTextFielddni.setBounds(300,550,150,30);
         jLabelregistro.setBounds(650, 100, 300, 50);

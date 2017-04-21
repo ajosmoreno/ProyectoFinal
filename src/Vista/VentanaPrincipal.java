@@ -5,9 +5,14 @@
  */
 package Vista;
 
+import Vista.elementos.PanelPrincipal;
 import java.awt.Dimension;
 import java.awt.Graphics;
+import java.awt.Image;
 import javax.swing.ImageIcon;
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.SwingUtilities;
 
 /**
  *
@@ -18,22 +23,38 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     /**
      * Creates new form NewJFrame
      */
+    
+    
+   
     public VentanaPrincipal() {
-        initComponents();
-        setLocationRelativeTo(null);
+  
+        SwingUtilities.invokeLater(() -> {
+            crearPanelPrincipal();
+        });
     }
-   
-    /*
-       public void paintComponent (Graphics g){
-        Dimension tamanio = getSize();
-        ImageIcon imagenFondo = new ImageIcon (getClass().getResource("/Source Packages/Imagenes/fondo2.jpg"));
-        g.drawImage(imagenFondo,getImage(), 0,0, tamanio.width, tamanio.height, null);
-        setOpaque(false);
         
-        super.paintComponent(g);
+    /**
+     *
+     * @param PanelPrincipal
+     */
+    public void crearPanelPrincipal() {
+        try {
+            frame = new JFrame();
+            frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+            frame.setSize(700, 400);
+            frame.add(panel);
+            frame.setTitle("Tienda Moviles");
+            frame.setResizable(false);
+            frame.setVisible(true);
+            frame.setLocationRelativeTo(null);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
-   */ 
-   
+    
+    public void visible(boolean bool) {
+        frame.setVisible(bool);
+    }
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -44,81 +65,21 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jButtonregistrar = new javax.swing.JButton();
-        jLabel2 = new javax.swing.JLabel();
-        jButtonentrar = new javax.swing.JButton();
-        jPasswordFieldcontraseña = new javax.swing.JPasswordField();
-        jLabel1 = new javax.swing.JLabel();
-        jTextFieldnombre = new javax.swing.JTextField();
-        jLabelnombre = new javax.swing.JLabel();
-
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Tienda Moviles");
         setBackground(new java.awt.Color(255, 255, 255));
-
-        jButtonregistrar.setFont(new java.awt.Font("Kristen ITC", 0, 11)); // NOI18N
-        jButtonregistrar.setText("Registrar");
-
-        jLabel2.setFont(new java.awt.Font("Kristen ITC", 0, 11)); // NOI18N
-        jLabel2.setText("¿Aún no estas registrado?");
-
-        jButtonentrar.setFont(new java.awt.Font("Kristen ITC", 0, 11)); // NOI18N
-        jButtonentrar.setText("Entrar");
-
-        jLabel1.setFont(new java.awt.Font("Kristen ITC", 0, 11)); // NOI18N
-        jLabel1.setText("Contraseña: ");
-
-        jLabelnombre.setFont(new java.awt.Font("Kristen ITC", 0, 11)); // NOI18N
-        jLabelnombre.setText("Usuario:");
+        setPreferredSize(new java.awt.Dimension(800, 600));
+        setResizable(false);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(150, 150, 150)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(jLabel1)
-                        .addGap(18, 18, 18)
-                        .addComponent(jPasswordFieldcontraseña, javax.swing.GroupLayout.PREFERRED_SIZE, 149, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(jLabelnombre, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jTextFieldnombre, javax.swing.GroupLayout.PREFERRED_SIZE, 148, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(126, 126, 126)
-                        .addComponent(jButtonentrar)
-                        .addGap(42, 42, 42)))
-                .addGap(0, 214, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(jLabel2)
-                        .addContainerGap())
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(jButtonregistrar)
-                        .addGap(36, 36, 36))))
+            .addGap(0, 601, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(76, 76, 76)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextFieldnombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabelnombre, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(32, 32, 32)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jPasswordFieldcontraseña, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel1))
-                .addGap(38, 38, 38)
-                .addComponent(jButtonentrar)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 79, Short.MAX_VALUE)
-                .addComponent(jLabel2)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jButtonregistrar)
-                .addGap(18, 18, 18))
+            .addGap(0, 372, Short.MAX_VALUE)
         );
 
         pack();
@@ -127,46 +88,18 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     /**
      * @param args the command line arguments
      */
-    public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
          * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
          */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(VentanaPrincipal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(VentanaPrincipal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(VentanaPrincipal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(VentanaPrincipal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
+   
         //</editor-fold>
         //</editor-fold>
-
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new VentanaPrincipal().setVisible(true);
-            }
-        });
-    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButtonentrar;
-    private javax.swing.JButton jButtonregistrar;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabelnombre;
-    private javax.swing.JPasswordField jPasswordFieldcontraseña;
-    private javax.swing.JTextField jTextFieldnombre;
     // End of variables declaration//GEN-END:variables
+JFrame frame;
+PanelPrincipal panel = new PanelPrincipal();
+        
 }
