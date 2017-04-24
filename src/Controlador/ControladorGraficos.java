@@ -8,7 +8,6 @@ package Controlador;
 
 import Vista.elementos.InterfazCompra;
 import Vista.elementos.PanelPrincipal;
-import Vista.elementos.Registrousuarios;
 import Vista.VentanaPrincipal;
 
 
