@@ -1,8 +1,13 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
 package Vista.elementos;
 
 /**
  *
- * @author José Manuel Moreno Córdoba
+ * @author Antonio
  */
 public class RegistroUsuarios extends javax.swing.JDialog {
 
@@ -12,6 +17,7 @@ public class RegistroUsuarios extends javax.swing.JDialog {
     public RegistroUsuarios(java.awt.Frame parent, boolean modal) {
         super(parent, modal);
         initComponents();
+        setLocationRelativeTo(null);
     }
 
     /**
@@ -23,29 +29,191 @@ public class RegistroUsuarios extends javax.swing.JDialog {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jCalendar1 = new com.toedter.calendar.JCalendar();
+        buttonGrouppermisos = new javax.swing.ButtonGroup();
+        jLabelRegistro = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jTextFieldnombreusuario = new javax.swing.JTextField();
+        jPasswordFieldusuario = new javax.swing.JPasswordField();
+        jLabelnombre = new javax.swing.JLabel();
+        jLabelapellidos = new javax.swing.JLabel();
+        jLabeldireccion = new javax.swing.JLabel();
+        jLabeltelefono = new javax.swing.JLabel();
+        jTextFieldnombre = new javax.swing.JTextField();
+        jTextFieldapellidos = new javax.swing.JTextField();
+        jTextFielddireccion = new javax.swing.JTextField();
+        jTextFieldtelefono = new javax.swing.JTextField();
+        jButtonaceptar = new javax.swing.JButton();
+        jButtonborrartodo = new javax.swing.JButton();
+        jButtonsalir = new javax.swing.JButton();
+        jLabel3 = new javax.swing.JLabel();
+        jDateChoosernacimiento = new com.toedter.calendar.JDateChooser();
+        jLabeldni = new javax.swing.JLabel();
+        jTextFielddni = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+
+        jLabelRegistro.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabelRegistro.setText("REGISTRO DE USUARIOS");
+
+        jLabel1.setText("Usuario:");
+
+        jLabel2.setText("Contraseña:");
+
+        jLabelnombre.setText("Nombre: ");
+
+        jLabelapellidos.setText("Apellidos:");
+
+        jLabeldireccion.setText("Dirección:");
+
+        jLabeltelefono.setText("Telefono:");
+
+        jButtonaceptar.setText("Aceptar");
+
+        jButtonborrartodo.setText("Borrar todo");
+        jButtonborrartodo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonborrartodoActionPerformed(evt);
+            }
+        });
+
+        jButtonsalir.setText("Salir");
+        jButtonsalir.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonsalirActionPerformed(evt);
+            }
+        });
+
+        jLabel3.setText("Fecha de nacimiento: ");
+
+        jDateChoosernacimiento.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                jDateChoosernacimientoKeyPressed(evt);
+            }
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jDateChoosernacimientoKeyTyped(evt);
+            }
+        });
+
+        jLabeldni.setText("DNI:");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(101, 101, 101)
-                .addComponent(jCalendar1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(115, Short.MAX_VALUE))
+                .addGap(80, 80, 80)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jButtonaceptar)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 112, Short.MAX_VALUE)
+                        .addComponent(jButtonborrartodo)
+                        .addGap(122, 122, 122)
+                        .addComponent(jButtonsalir)
+                        .addContainerGap(125, Short.MAX_VALUE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabeldireccion)
+                            .addComponent(jLabeltelefono)
+                            .addComponent(jLabel3)
+                            .addComponent(jLabeldni)
+                            .addComponent(jLabelapellidos)
+                            .addComponent(jLabelnombre)
+                            .addComponent(jLabel2)
+                            .addComponent(jLabel1))
+                        .addGap(34, 34, 34)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jTextFieldnombre, javax.swing.GroupLayout.PREFERRED_SIZE, 157, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jTextFieldnombreusuario, javax.swing.GroupLayout.PREFERRED_SIZE, 157, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jPasswordFieldusuario, javax.swing.GroupLayout.PREFERRED_SIZE, 157, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jTextFieldapellidos, javax.swing.GroupLayout.PREFERRED_SIZE, 157, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jTextFielddni, javax.swing.GroupLayout.PREFERRED_SIZE, 157, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jTextFieldtelefono, javax.swing.GroupLayout.PREFERRED_SIZE, 157, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jTextFielddireccion, javax.swing.GroupLayout.PREFERRED_SIZE, 157, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jDateChoosernacimiento, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(0, 0, Short.MAX_VALUE))))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(211, 211, 211)
+                .addComponent(jLabelRegistro)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(75, Short.MAX_VALUE)
-                .addComponent(jCalendar1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(72, 72, 72))
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabelRegistro, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(51, 51, 51)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel1)
+                    .addComponent(jTextFieldnombreusuario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel2)
+                    .addComponent(jPasswordFieldusuario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabelnombre)
+                    .addComponent(jTextFieldnombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabelapellidos)
+                    .addComponent(jTextFieldapellidos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabeldni)
+                    .addComponent(jTextFielddni, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(17, 17, 17)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel3)
+                    .addComponent(jDateChoosernacimiento, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jTextFieldtelefono, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabeldireccion, javax.swing.GroupLayout.PREFERRED_SIZE, 14, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jTextFielddireccion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabeltelefono))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 85, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jButtonaceptar)
+                    .addComponent(jButtonborrartodo)
+                    .addComponent(jButtonsalir))
+                .addGap(69, 69, 69))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jButtonborrartodoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonborrartodoActionPerformed
+        // TODO add your handling code here:
+        
+        jTextFieldnombreusuario.setText("");
+        jPasswordFieldusuario.setText("");
+        jTextFieldnombre.setText("");
+        jTextFieldapellidos.setText("");
+        jTextFielddireccion.setText("");
+        jTextFieldtelefono.setText("");
+        jDateChoosernacimiento.setDate(null);
+        jTextFielddni.setText("");
+        
+    }//GEN-LAST:event_jButtonborrartodoActionPerformed
+
+    private void jButtonsalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonsalirActionPerformed
+        // TODO add your handling code here:
+        System.exit(0);
+        
+    }//GEN-LAST:event_jButtonsalirActionPerformed
+
+    private void jDateChoosernacimientoKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jDateChoosernacimientoKeyPressed
+        // TODO add your handling code here:
+        evt.consume();
+    }//GEN-LAST:event_jDateChoosernacimientoKeyPressed
+
+    private void jDateChoosernacimientoKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jDateChoosernacimientoKeyTyped
+        // TODO add your handling code here:
+        evt.consume();
+    }//GEN-LAST:event_jDateChoosernacimientoKeyTyped
 
     /**
      * @param args the command line arguments
@@ -90,6 +258,26 @@ public class RegistroUsuarios extends javax.swing.JDialog {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private com.toedter.calendar.JCalendar jCalendar1;
+    private javax.swing.ButtonGroup buttonGrouppermisos;
+    private javax.swing.JButton jButtonaceptar;
+    private javax.swing.JButton jButtonborrartodo;
+    private javax.swing.JButton jButtonsalir;
+    private com.toedter.calendar.JDateChooser jDateChoosernacimiento;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabelRegistro;
+    private javax.swing.JLabel jLabelapellidos;
+    private javax.swing.JLabel jLabeldireccion;
+    private javax.swing.JLabel jLabeldni;
+    private javax.swing.JLabel jLabelnombre;
+    private javax.swing.JLabel jLabeltelefono;
+    private javax.swing.JPasswordField jPasswordFieldusuario;
+    private javax.swing.JTextField jTextFieldapellidos;
+    private javax.swing.JTextField jTextFielddireccion;
+    private javax.swing.JTextField jTextFielddni;
+    private javax.swing.JTextField jTextFieldnombre;
+    private javax.swing.JTextField jTextFieldnombreusuario;
+    private javax.swing.JTextField jTextFieldtelefono;
     // End of variables declaration//GEN-END:variables
 }
