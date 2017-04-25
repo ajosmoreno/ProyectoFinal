@@ -127,7 +127,7 @@ public class PanelPrincipal extends javax.swing.JFrame {
     private void jButtonentrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonentrarActionPerformed
         // TODO add your handling code here:
         Opciones opcion = new Opciones(this,true);
-        opcion.setVisible(true);
+        opcion.setVisible(true); 
     }//GEN-LAST:event_jButtonentrarActionPerformed
 
     /**
