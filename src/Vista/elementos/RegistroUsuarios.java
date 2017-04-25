@@ -5,9 +5,13 @@
  */
 package Vista.elementos;
 
+import java.awt.BorderLayout;
+import java.awt.Container;
 import java.awt.Graphics;
 import java.awt.Image;
 import java.awt.Toolkit;
+import javax.swing.ImageIcon;
+import javax.swing.JLabel;
 
 /**
  *
@@ -20,18 +24,8 @@ public class RegistroUsuarios extends javax.swing.JDialog {
      */
     public RegistroUsuarios(java.awt.Frame parent, boolean modal) {
         super(parent, modal);
-        this.image = Toolkit.getDefaultToolkit().getImage("src/Imagenes/fondoprincipal.jpg");
         initComponents();
-        setLocationRelativeTo(null);
-        private final Image image;
-        
-        
-        
-    
-        
-        
-        
-    
+    }    
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -180,9 +174,9 @@ public class RegistroUsuarios extends javax.swing.JDialog {
                     .addComponent(jLabel3)
                     .addComponent(jDateChoosernacimiento, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextFieldtelefono, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabeldireccion, javax.swing.GroupLayout.PREFERRED_SIZE, 14, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabeldireccion, javax.swing.GroupLayout.PREFERRED_SIZE, 14, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextFieldtelefono, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jTextFielddireccion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -199,8 +193,6 @@ public class RegistroUsuarios extends javax.swing.JDialog {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButtonborrartodoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonborrartodoActionPerformed
-        // TODO add your handling code here:
-        
         jTextFieldnombreusuario.setText("");
         jPasswordFieldusuario.setText("");
         jTextFieldnombre.setText("");
@@ -209,23 +201,19 @@ public class RegistroUsuarios extends javax.swing.JDialog {
         jTextFieldtelefono.setText("");
         jDateChoosernacimiento.setDate(null);
         jTextFielddni.setText("");
-        
     }//GEN-LAST:event_jButtonborrartodoActionPerformed
 
     private void jButtonsalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonsalirActionPerformed
-        // TODO add your handling code here:
         System.exit(0);
         
     }//GEN-LAST:event_jButtonsalirActionPerformed
 
     private void jDateChoosernacimientoKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jDateChoosernacimientoKeyPressed
-        // TODO add your handling code here:
-        evt.consume();
+
     }//GEN-LAST:event_jDateChoosernacimientoKeyPressed
 
     private void jDateChoosernacimientoKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jDateChoosernacimientoKeyTyped
-        // TODO add your handling code here:
-        evt.consume();
+
     }//GEN-LAST:event_jDateChoosernacimientoKeyTyped
 
     /**
@@ -293,10 +281,5 @@ public class RegistroUsuarios extends javax.swing.JDialog {
     private javax.swing.JTextField jTextFieldnombreusuario;
     private javax.swing.JTextField jTextFieldtelefono;
     // End of variables declaration//GEN-END:variables
-public void paintComponent(Graphics g) {
-        super.paintComponent(g);
-        g.drawImage(image, 0, 0, 700, 400, this);
 
-
-}
 }
