@@ -51,19 +51,19 @@ public class PanelPrincipal extends javax.swing.JFrame {
         jLabelusuario.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabelusuario.setForeground(new java.awt.Color(255, 255, 255));
         jLabelusuario.setText("Usuario :");
-        getContentPane().add(jLabelusuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 150, 60, 40));
-        getContentPane().add(jTextFieldusuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 160, 210, -1));
-        getContentPane().add(jPasswordFieldusuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 210, 210, -1));
+        getContentPane().add(jLabelusuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 140, 60, 40));
+        getContentPane().add(jTextFieldusuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 150, 210, -1));
+        getContentPane().add(jPasswordFieldusuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 190, 210, -1));
 
         jLabelpassword.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabelpassword.setForeground(new java.awt.Color(255, 255, 255));
         jLabelpassword.setText("Contraseña :");
-        getContentPane().add(jLabelpassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 200, 90, 30));
+        getContentPane().add(jLabelpassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 180, 90, 30));
 
         jLabelregistro.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabelregistro.setForeground(new java.awt.Color(255, 255, 255));
         jLabelregistro.setText("¿Aun no estas registrado?");
-        getContentPane().add(jLabelregistro, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 310, 170, 20));
+        getContentPane().add(jLabelregistro, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 300, 170, 20));
 
         jButtonregistro.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jButtonregistro.setText("Registrar");
@@ -72,11 +72,16 @@ public class PanelPrincipal extends javax.swing.JFrame {
                 jButtonregistroActionPerformed(evt);
             }
         });
-        getContentPane().add(jButtonregistro, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 350, 100, 30));
+        getContentPane().add(jButtonregistro, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 340, 110, 40));
 
         jButtonentrar.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jButtonentrar.setText("Entrar");
-        getContentPane().add(jButtonentrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 260, 80, 30));
+        jButtonentrar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonentrarActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButtonentrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 240, 100, 40));
 
         jButtoninvitado.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jButtoninvitado.setText("Entrar como invitado");
@@ -85,7 +90,7 @@ public class PanelPrincipal extends javax.swing.JFrame {
                 jButtoninvitadoActionPerformed(evt);
             }
         });
-        getContentPane().add(jButtoninvitado, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 350, 160, 30));
+        getContentPane().add(jButtoninvitado, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 340, 160, 40));
 
         jButtonsalir.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jButtonsalir.setText("Salir");
@@ -94,7 +99,7 @@ public class PanelPrincipal extends javax.swing.JFrame {
                 jButtonsalirActionPerformed(evt);
             }
         });
-        getContentPane().add(jButtonsalir, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 350, 70, 30));
+        getContentPane().add(jButtonsalir, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 340, 80, 40));
 
         jLabelfondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/fondoprincipal.jpg"))); // NOI18N
         getContentPane().add(jLabelfondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 700, 400));
@@ -118,6 +123,12 @@ public class PanelPrincipal extends javax.swing.JFrame {
         registro.setVisible(true);
         
     }//GEN-LAST:event_jButtonregistroActionPerformed
+
+    private void jButtonentrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonentrarActionPerformed
+        // TODO add your handling code here:
+        Opciones opcion = new Opciones(this,true);
+        opcion.setVisible(true);
+    }//GEN-LAST:event_jButtonentrarActionPerformed
 
     /**
      * @param args the command line arguments
