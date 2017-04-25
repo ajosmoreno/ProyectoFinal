@@ -5,13 +5,21 @@
  */
 package Vista.elementos;
 
+import Controlador.ControladorRegistro;
+import com.toedter.calendar.JDateChooser;
 import java.awt.BorderLayout;
 import java.awt.Container;
 import java.awt.Graphics;
 import java.awt.Image;
 import java.awt.Toolkit;
+import java.sql.SQLException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.ImageIcon;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
+import javax.swing.JPasswordField;
+import javax.swing.JTextField;
 
 /**
  *
@@ -19,12 +27,14 @@ import javax.swing.JLabel;
  */
 public class RegistroUsuarios extends javax.swing.JDialog {
 
+    private ControladorRegistro miControlador;
     /**
      * Creates new form RegistroUsuarios
      */
     public RegistroUsuarios(java.awt.Frame parent, boolean modal) {
         super(parent, modal);
         initComponents();
+        miControlador = new ControladorRegistro(this);
     }    
 
     /**
@@ -76,6 +86,11 @@ public class RegistroUsuarios extends javax.swing.JDialog {
         jLabeltelefono.setText("Telefono:");
 
         jButtonaceptar.setText("Aceptar");
+        jButtonaceptar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonaceptarActionPerformed(evt);
+            }
+        });
 
         jButtonborrartodo.setText("Borrar todo");
         jButtonborrartodo.addActionListener(new java.awt.event.ActionListener() {
@@ -204,7 +219,7 @@ public class RegistroUsuarios extends javax.swing.JDialog {
     }//GEN-LAST:event_jButtonborrartodoActionPerformed
 
     private void jButtonsalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonsalirActionPerformed
-        System.exit(0);
+        this.dispose();
         
     }//GEN-LAST:event_jButtonsalirActionPerformed
 
@@ -216,6 +231,59 @@ public class RegistroUsuarios extends javax.swing.JDialog {
 
     }//GEN-LAST:event_jDateChoosernacimientoKeyTyped
 
+    private void jButtonaceptarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonaceptarActionPerformed
+        try {
+            miControlador.registrar();
+            this.dispose();
+        } catch (ClassNotFoundException | SQLException ex) {
+            if(ex.getMessage().contains("Duplicate entry") && ex.getMessage().contains("for key 'usuario'"))
+                mostrarError("El usuario elegido no está disponible.");
+            else if(ex.getMessage().contains("Duplicate entry") && ex.getMessage().contains("for key 'dni'"))
+                mostrarError("El DNI introducido ya pertenece a un usuario.");
+            else
+                mostrarError("Ha ocurrido un error desconocido.");
+        }
+    }//GEN-LAST:event_jButtonaceptarActionPerformed
+
+    public JDateChooser getjDateChoosernacimiento() {
+        return jDateChoosernacimiento;
+    }
+
+    public JPasswordField getjPasswordFieldusuario() {
+        return jPasswordFieldusuario;
+    }
+
+    public JTextField getjTextFieldapellidos() {
+        return jTextFieldapellidos;
+    }
+
+    public JTextField getjTextFielddireccion() {
+        return jTextFielddireccion;
+    }
+
+    public JTextField getjTextFielddni() {
+        return jTextFielddni;
+    }
+
+    public JTextField getjTextFieldnombre() {
+        return jTextFieldnombre;
+    }
+
+    public JTextField getjTextFieldnombreusuario() {
+        return jTextFieldnombreusuario;
+    }
+
+    public JTextField getjTextFieldtelefono() {
+        return jTextFieldtelefono;
+    }
+    
+    public void mostrarError(String mensaje){
+        JOptionPane.showMessageDialog(this, mensaje, "Error", JOptionPane.ERROR_MESSAGE);
+    }
+    
+    public void mostrarMensaje(String mensaje){
+        JOptionPane.showMessageDialog(this, mensaje, "Error", JOptionPane.DEFAULT_OPTION);
+    }
     /**
      * @param args the command line arguments
      */

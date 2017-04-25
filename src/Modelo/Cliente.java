@@ -1,5 +1,8 @@
 package Modelo;
 
+import java.math.BigInteger;
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
 import java.util.Date;
 
 /**
@@ -61,5 +64,20 @@ public final class Cliente extends Usuario{
 
     public void setDni(String dni) {
         this.dni = dni;
+    }
+    
+    public static String encriptarContrasenya(String contrasenya){
+        String hashText = "";
+        try{
+            MessageDigest md = MessageDigest.getInstance("MD5");
+            byte[] messageDigest = md.digest(contrasenya.getBytes());
+            BigInteger number = new BigInteger(1, messageDigest);
+            hashText = number.toString(16);
+            while(hashText.length() < 32) hashText = "0" + hashText;
+            
+        } catch (NoSuchAlgorithmException ex){
+            
+        }
+        return hashText;
     }
 }
