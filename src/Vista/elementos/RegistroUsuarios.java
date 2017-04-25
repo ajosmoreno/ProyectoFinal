@@ -5,6 +5,10 @@
  */
 package Vista.elementos;
 
+import java.awt.Graphics;
+import java.awt.Image;
+import java.awt.Toolkit;
+
 /**
  *
  * @author Antonio
@@ -16,9 +20,18 @@ public class RegistroUsuarios extends javax.swing.JDialog {
      */
     public RegistroUsuarios(java.awt.Frame parent, boolean modal) {
         super(parent, modal);
+        this.image = Toolkit.getDefaultToolkit().getImage("src/Imagenes/fondoprincipal.jpg");
         initComponents();
         setLocationRelativeTo(null);
-    }
+        private final Image image;
+        
+        
+        
+    
+        
+        
+        
+    
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -280,4 +293,10 @@ public class RegistroUsuarios extends javax.swing.JDialog {
     private javax.swing.JTextField jTextFieldnombreusuario;
     private javax.swing.JTextField jTextFieldtelefono;
     // End of variables declaration//GEN-END:variables
+public void paintComponent(Graphics g) {
+        super.paintComponent(g);
+        g.drawImage(image, 0, 0, 700, 400, this);
+
+
+}
 }
