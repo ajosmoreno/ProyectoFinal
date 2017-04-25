@@ -14,10 +14,10 @@ public final class Cliente extends Usuario{
     private Pedido[] pedidosRealizados;
     private String direccion;
     private String telefono;
-    private Date fechaNacimiento;
+    private String fechaNacimiento;
     private String dni;
     
-    public Cliente(int id, String nombreUsuario, String contrasenya, Date fechaRegistro, String nombre, String apellidos, int permisos, Pedido[] pedidosRealizados, String direccion, String telefono, Date fechaNacimiento, String dni){
+    public Cliente(int id, String nombreUsuario, String contrasenya, String fechaRegistro, String nombre, String apellidos, int permisos, Pedido[] pedidosRealizados, String direccion, String telefono, String fechaNacimiento, String dni){
         super(id, nombreUsuario, contrasenya, fechaRegistro, nombre, apellidos, permisos);
         this.pedidosRealizados = pedidosRealizados;
         this.direccion = direccion;
@@ -50,11 +50,11 @@ public final class Cliente extends Usuario{
         this.telefono = telefono;
     }
 
-    public Date getFechaNacimiento() {
+    public String getFechaNacimiento() {
         return fechaNacimiento;
     }
 
-    public void setFechaNacimiento(Date fechaNacimiento) {
+    public void setFechaNacimiento(String fechaNacimiento) {
         this.fechaNacimiento = fechaNacimiento;
     }
 

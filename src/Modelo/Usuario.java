@@ -11,12 +11,12 @@ public class Usuario {
     private int id;
     private String nombreUsuario;
     private String contrasenya;
-    private Date fechaRegistro;
+    private String fechaRegistro;
     private String nombre;
     private String apellidos;
     private int permisos;
 
-    public Usuario(int id, String nombreUsuario, String contrasenya, Date fechaRegistro, String nombre, String apellidos, int permisos) {
+    public Usuario(int id, String nombreUsuario, String contrasenya, String fechaRegistro, String nombre, String apellidos, int permisos) {
         this.id = id;
         this.nombreUsuario = nombreUsuario;
         this.contrasenya = contrasenya;
@@ -50,11 +50,11 @@ public class Usuario {
         this.contrasenya = contrasenya;
     }
 
-    public Date getFechaRegistro() {
+    public String getFechaRegistro() {
         return fechaRegistro;
     }
 
-    public void setFechaRegistro(Date fechaRegistro) {
+    public void setFechaRegistro(String fechaRegistro) {
         this.fechaRegistro = fechaRegistro;
     }
 
