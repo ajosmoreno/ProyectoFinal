@@ -32,6 +32,10 @@ public class VentanaPrincipal extends javax.swing.JFrame {
             crearPanelPrincipal();
         });
     }
+
+    public VentanaPrincipal(PanelPrincipal panelprin) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
         
     /**
      *
