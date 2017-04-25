@@ -3,6 +3,7 @@ package Modelo;
 import java.math.BigInteger;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
+import java.util.ArrayList;
 import java.util.Date;
 
 /**
@@ -11,13 +12,13 @@ import java.util.Date;
  */
 public final class Cliente extends Usuario{
     
-    private Pedido[] pedidosRealizados;
+    private ArrayList<Pedido> pedidosRealizados;
     private String direccion;
     private String telefono;
     private String fechaNacimiento;
     private String dni;
     
-    public Cliente(int id, String nombreUsuario, String contrasenya, String fechaRegistro, String nombre, String apellidos, int permisos, Pedido[] pedidosRealizados, String direccion, String telefono, String fechaNacimiento, String dni){
+    public Cliente(int id, String nombreUsuario, String contrasenya, String fechaRegistro, String nombre, String apellidos, int permisos, ArrayList<Pedido> pedidosRealizados, String direccion, String telefono, String fechaNacimiento, String dni){
         super(id, nombreUsuario, contrasenya, fechaRegistro, nombre, apellidos, permisos);
         this.pedidosRealizados = pedidosRealizados;
         this.direccion = direccion;
@@ -26,11 +27,11 @@ public final class Cliente extends Usuario{
         this.dni = dni;
     }
 
-    public Pedido[] getPedidosRealizados() {
+    public ArrayList<Pedido> getPedidosRealizados() {
         return pedidosRealizados;
     }
 
-    public void setPedidosRealizados(Pedido[] pedidosRealizados) {
+    public void setPedidosRealizados(ArrayList<Pedido> pedidosRealizados) {
         this.pedidosRealizados = pedidosRealizados;
     }
 
