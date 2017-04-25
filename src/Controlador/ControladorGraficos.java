@@ -5,32 +5,24 @@
  */
 package Controlador;
 
-
 import Vista.elementos.InterfazCompra;
 import Vista.elementos.PanelPrincipal;
 import Vista.VentanaPrincipal;
-
-
-
-
 
 /**
  *
  * @author Antonio
  */
 public class ControladorGraficos {
+
     private static ControladorGraficos singleton = null;
-    private static VentanaPrincipal
-            PanelPrincipal = null,
+    private static VentanaPrincipal PanelPrincipal = null,
             Registro = null,
             Entrar = null;
-            
-            
 
     private ControladorGraficos() {
 
-}
-    
+    }
 
     public static ControladorGraficos getSingleton() {
         if (singleton == null) {
@@ -39,46 +31,34 @@ public class ControladorGraficos {
         return singleton;
     }
 
-
-    public void PanelPrincipal (){
-           
+    public void PanelPrincipal() {
         ocultar();
-        if(Registro !=null){
+        if (Registro != null) {
             Registro.setVisible(false);
-        }  
-        if(Entrar !=null){
+        }
+        if (Entrar != null) {
             Entrar.setVisible(false);
         }
-        
+
         PanelPrincipal panel = new PanelPrincipal();
-        
-        }
-    
-    public void Registroususarios (){
-      
-        
-        
+
     }
-    
-    public void InterfazCompra(){
-        
-        
+
+    public void Registroususarios() {
+
     }
-    
-    
-    
-    private void ocultar(){
-        
-        if(Registro !=null){
+
+    public void InterfazCompra() {
+
+    }
+
+    private void ocultar() {
+        if (Registro != null) {
             Registro.setVisible(false);
         }
-        if(Entrar != null){
+        if (Entrar != null) {
             Entrar.setVisible(false);
         }
     }
-    
-    
-    
-    
-    
-    }
+
+}
